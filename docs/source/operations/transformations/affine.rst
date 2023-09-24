@@ -20,7 +20,7 @@ x,y,z coordinates, and translation and scaling on the temporal coordinate.
 +---------------------+----------------------------------------------------------+
 
 By default, the parameters are set for an identity transforms. The transformation
-is reversible unless the determinant of the sji matrix is 0, or `tscale` is 0
+is reversible unless the determinant of the sji matrix is 0, or `tscale` is 0.
 
 This can be used to implement:
 
@@ -47,7 +47,9 @@ This can be used to implement:
       source CRS to obtain the correct scale of the target CRS.
     * :math:`\theta` is the angle about which the axes of the source CRS need to
       be rotated to coincide with the axes of the target CRS, counter-clockwise
-      being positive
+      being positive.
+
+Note: +proj=affine cannot be used with the proj untility. Input is in radians, output is in degrees.
 
 Parameters
 ################################################################################
